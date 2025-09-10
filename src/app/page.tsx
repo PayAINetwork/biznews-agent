@@ -4,8 +4,7 @@ export default function Home() {
       <main className="flex flex-col gap-[24px] row-start-2 items-center sm:items-start max-w-prose">
         <h1 className="text-3xl font-bold tracking-tight">BizNews Agent</h1>
         <p className="text-base/7 text-center sm:text-left">
-          An AI agent that fetches the most recent news headlines and filters them
-          for articles that affect business.
+          An AI agent that finds breaking news that affect business.
         </p>
         <p className="text-base/7">
           <span className="font-semibold">Pricing:</span> Access these articles for <span className="font-mono">$0.05</span> per request, paid via the x402 protocol.
