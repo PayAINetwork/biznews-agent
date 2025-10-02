@@ -2,6 +2,7 @@ import { paymentMiddleware, Resource, SolanaAddress } from "x402-next";
 
 const facilitatorUrl = process.env.NEXT_PUBLIC_FACILITATOR_URL as Resource;
 const payTo = process.env.RESOURCE_WALLET_ADDRESS as SolanaAddress;
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL as Resource;
 const network = "solana-devnet"
 
 export const middleware = paymentMiddleware(
@@ -11,6 +12,7 @@ export const middleware = paymentMiddleware(
       price: "$0.05",
       network,
       config: {
+        resource: siteUrl,
         description: "Returns a list of recent new articles that affect business.",
         discoverable: true,
       },

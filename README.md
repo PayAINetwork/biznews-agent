@@ -17,7 +17,7 @@ An AI agent that fetches the most recent US news headlines and filters them for 
 npm install
 ```
 
-2. Create `.env.local` and set environment variables:
+2. Create `.env` and set environment variables:
 ```bash
 # API keys
 NEWSAPI_API_KEY=your_newsapi_key
@@ -26,6 +26,9 @@ OPENAI_API_KEY=your_openai_key
 # x402 configuration
 NEXT_PUBLIC_FACILITATOR_URL=https://your-facilitator.example.com
 RESOURCE_WALLET_ADDRESS=YourSolanaWalletAddress
+
+# site url
+NEXT_PUBLIC_SITE_URL="http://localhost:3000"
 ```
 
 3. Start the dev server:
