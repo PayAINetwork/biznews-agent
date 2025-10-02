@@ -12,6 +12,7 @@ export const middleware = paymentMiddleware(
       network,
       config: {
         description: "Returns a list of recent new articles that affect business.",
+        discoverable: true,
       },
     },
   },
