@@ -12,7 +12,7 @@ export const middleware = paymentMiddleware(
       price: "$0.05",
       network,
       config: {
-        resource: siteUrl,
+        resource: `${siteUrl}/news`,
         description: "Returns a list of recent new articles that affect business.",
         discoverable: true,
       },
