@@ -22,6 +22,7 @@ import {
   ERC20TokenAmount,
   SupportedEVMNetworks,
   SupportedSVMNetworks,
+  Network,
 } from "x402/types";
 import { useFacilitator as createFacilitator } from "x402/verify";
 import { safeBase64Encode } from "x402/shared";
@@ -30,7 +31,7 @@ import { safeBase64Encode } from "x402/shared";
 const facilitatorUrl = process.env.NEXT_PUBLIC_FACILITATOR_URL as Resource;
 const payTo = process.env.RESOURCE_WALLET_ADDRESS as SolanaAddress;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL as Resource;
-const network = "solana-devnet"
+const network = process.env.NETWORK as Network;
 
 
 export const middleware = paymentMiddleware(
