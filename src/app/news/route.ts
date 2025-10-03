@@ -1,4 +1,3 @@
-import { NextRequest } from "next/server";
 import OpenAI from "openai";
 
 type NewsApiArticle = {
@@ -22,7 +21,7 @@ const NEWS_API_URL =
   "https://newsapi.org/v2/top-headlines?pageSize=100&country=us";
 
 
-export async function GET(_req: NextRequest) {
+export async function GET() {
   try {
     const newsApiKey = process.env.NEWSAPI_API_KEY || '';
 
@@ -78,7 +77,7 @@ export async function GET(_req: NextRequest) {
       } else if (parsed && Array.isArray(parsed.articles)) {
         filteredArticles = parsed.articles as NewsApiArticle[];
       }
-    } catch (_err) {
+    } catch {
       // If parsing fails, return empty list rather than erroring the request
       filteredArticles = [];
     }
